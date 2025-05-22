@@ -1,0 +1,586 @@
+<!DOCTYPE html><html><head>
+    <title>American Airlines | flyreservationdesk</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="Author" content="www.flyreservationdesk.com">
+    <meta name="page-topic" content="www.flyreservationdesk.com">
+    <meta name="Copyright" content="2025,  www.flyreservationdesk.com">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.flyreservationdesk.com/airlines/aa">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bt-icons.css" rel="stylesheet">
+<link href="css/slick-theme.css" rel="stylesheet">
+<link href="css/site.css" rel="stylesheet">
+
+    <link href="css/searchengine.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link href="css/home1.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/global.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js.cookie.min.js"></script>
+    
+    <link href="css/american.css" rel="stylesheet">
+
+
+    <script>
+        var numberOfMonthValue;
+        $(window).resize(function () {
+            if ($(window).width() < 768) {
+                numberOfMonthValue = 1;
+                $("#departDate").datepicker("option", "numberOfMonths", numberOfMonthValue);
+                $("#returnDate").datepicker("option", "numberOfMonths", numberOfMonthValue);
+            } else {
+                numberOfMonthValue = 2;
+                $("#departDate").datepicker("option", "numberOfMonths", numberOfMonthValue);
+                $("#returnDate").datepicker("option", "numberOfMonths", numberOfMonthValue);
+            }
+        })
+            .trigger('resize');
+
+    </script>
+
+</head>
+
+<body>
+   
+
+    <div id="wrapper">
+        <div id="mainCntr">
+<!-- <section id="imp-advisory">
+    <div class="container position-relative">
+        <div class="pe-4 text-lg-center">
+            <b>Starting May 7, 2025</b>, a state-issued REAL ID-compliant license or ID card, or passport is required to fly within the U.S. <a href="https://www.dhs.gov/real-id" target="_blank">Learn more</a>
+        </div>
+        <a id="advisry-close"><i class="bi bi-x"></i></a>
+    </div>
+</section> -->
+<header class="relative" id="header-sec">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="d-flex justify-content-between align-items-center header-sec">
+                    <div class="logo">
+                        <a href="/"><img src="images/logo.png" alt="flyreservationdesk"></a>
+                    </div>
+
+                    <nav class="nav-sec">
+                       <ul class="d-flex m-0 p-0 list-unstyled">
+                            <li><a href="/index.html">Flight</a></li>
+                            <li><a href="/about-us.html">About Us</a></li>
+                            <li><a href="/contact-us.html">Support</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="d-flex align-items-center">
+
+
+<div class="currencyBox">
+    <div class="currencyClick"><span class="curClass">USD </span> <i class="bi bi-chevron-down"></i></div>
+
+    <ul id="currencyul" style="display:none;">
+
+        <li onclick="currencyChange('USD')">
+            <a href="javascript:void(0)">
+                <div><span class="sprte usd" title="United States"> </span><span class="name_currency"> USD</span></div>
+                <span class="side_curency">$</span>
+            </a>
+        </li>
+
+        <li onclick="currencyChange('CAD')">
+            <a href="javascript:void(0)">
+                <div><span class="sprte cad" title="Canada"> </span><span class="name_currency"> CAD</span></div>
+                <span class="side_curency">CA$</span>
+            </a>
+        </li>
+
+        <li onclick="currencyChange('INR')">
+            <a href="javascript:void(0)">
+                <div><span class="sprte inr" title="India"> </span><span class="name_currency"> INR</span></div>
+                <span class="side_curency">₹</span>
+            </a>
+        </li>
+
+        <li onclick="currencyChange('GBP')">
+            <a href="javascript:void(0)">
+                <div><span class="sprte gbp" title="United Kingdom"> </span><span class="name_currency"> GBP</span></div>
+                <span class="side_curency">£</span>
+            </a>
+        </li>
+
+        <li onclick="currencyChange('AED')">
+
+            <a href="javascript:void(0)">
+                <div><span class="sprte aed" title="United Arab Emirates"> </span><span class="name_currency"> AED</span></div>
+                <span class="side_curency">AED</span>
+            </a>
+        </li>
+
+        <li onclick="currencyChange('AUD')">
+            <a href="javascript:void(0)">
+                <div><span class="sprte aud" title="Australia"> </span><span class="name_currency"> AUD</span></div>
+                <span class="side_curency">A$</span>
+            </a>
+        </li>
+
+        <li onclick="currencyChange('SAR')">
+            <a href="javascript:void(0)">
+                <div><span class="sprte sar" title="Saudi Arabia"> </span><span class="name_currency"> SAR</span></div>
+                <span class="side_curency">SAR</span>
+            </a>
+        </li>
+        <li onclick="currencyChange('EUR')">
+            <a href="javascript:void(0)">
+                <div><span class="sprte eur" title="Saudi Arabia"> </span><span class="name_currency"> EUR</span></div>
+                <span class="side_curency">EUR</span>
+            </a>
+        </li>
+        <li onclick="currencyChange('MXN')">
+            <a href="javascript:void(0)">
+                <div><span class="sprte mxn"> </span><span class="name_currency"> MXN</span></div>
+                <span class="side_curency">MXN</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+                        <div class="d-flex justify-content-end gap-0 align-items-center call-opt">
+                            <span>
+                                <img src="images/call.svg" alt="call">
+                            </span>
+                            <div class="free-deals">
+                                <span>Call us 24/7 for Support</span>
+                                <a href="tel:+1-855-717-0901" class="call-tfn">  +1-855-717-0901 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</header> 
+
+
+            
+
+<section class="serach-eng airlineBg">
+    <div class="container">
+        <div class="airlineName d-flex align-items-center justify-content-center flex-column">
+            <img src="images/aa.png" alt="ua" class="airlineLogo">
+            <span>
+                American Airlines
+            </span>
+        </div>
+        <div class="checkInSec">
+            <div class="airlineFacility">
+                <div class="icon">
+                    <img src="images/w-clock.svg" alt="snack">
+                </div>
+                <span class="facilityLabel">
+                    Check-in is available starting from 180 minutes
+                </span>
+            </div>
+            
+            <div class="airlineFacility">
+                <div class="icon">
+                    <img src="images/glob.svg" alt="snack">
+                </div>
+                <span class="facilityLabel">
+                    Online Check-in
+                </span>
+            </div>
+        </div>
+        <div class="row">
+
+<form action="/flights/searchengine" autocomplete="off" id="flights" method="post"><input id="SearchGuidId" name="SearchGuidId" type="hidden" value=""><input id="Origin" name="Origin" type="hidden" value=""><input id="Destination" name="Destination" type="hidden" value=""><input id="AffiliateId" name="AffiliateId" type="hidden" value="0"><input id="PortalId" name="PortalId" type="hidden" value="0"><input id="TripType" name="TripType" type="hidden" value="ROUNDTRIP">    <input type="hidden" id="OriginSearchDescription" name="OriginSearchDescription" value="Airport">
+    <input type="hidden" id="DestinationSearchDescription" name="DestinationSearchDescription" value="Airport">
+    <div class="col-12 mt-2 mt-sm-3 mt-sm-4 m-auto relative">
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
+                <div class="flight-Serch bg_form_holder">
+                    <ul class="trip-type">
+                        <li class="clsroundtrip  active "><label><input type="radio" onclick="callme('RoundTrip');" id="roundtrip" name="TripType" value="2" checked=""><span>Round Trip</span> </label></li>
+                        <li class="clsoneway "><label><input type="radio" onclick="callme('OneWay');" id="oneway" name="TripType" value="1"><span>One Way</span> </label></li>
+                    </ul>
+
+                    <div class="serach-Engine">
+
+                        <div class="from-to form_holder_common">
+
+                            <div class="label from inputOrigin" onclick="origFocus()">
+                                <label class="label-Head">From</label>
+                                <input type="text" autocomplete="off" onfocus="javascript:this.select();" placeholder="Origin city" value="" id="OriginSearch" name="OriginSearch" class="inputField input_clear valid">
+                                <p class="airport-name" id="OriginSearchDes">Airport</p>
+                                <span id="Depart_error" class="error-div1 errortext">Please select an origin</span>
+                            </div>
+
+                            <div class="swapIcon">
+                                <span><a href="javascript:void(0)" onclick="searchengine.swap()"><img src="images/swap.svg" class="w-100" alt="swipe"></a></span>
+                            </div>
+
+                            <div class="label from inputDestination" onclick="destFocus()">
+                                <label class="label-Head">To</label>
+                                <input type="text" autocomplete="off" onfocus="javascript:this.select();" placeholder="Dest. city" id="DestinationSearch" name="DestinationSearch" class="inputField input_clear">
+                                <p class="airport-name" id="DestinationSearchDes">Airport</p>
+                                <span id="Return_error" class="error-div1 errortext">Please select an destination</span>
+                            </div>
+
+                        </div>
+
+                        <div class="depart-return form_holder_common" onclick="deptFocus()">
+                            <div class="label depart">
+                                <label class="label-Head">Depart</label>
+                                <input type="text" class="inputField cursor" placeholder="Depart" name="Departure" id="Departure" autocomplete="off" value="" readonly="">
+                                <p class="airport-name depday" id=""></p>
+                                <span id="Departure_error" class="error-div1 errortext">Please enter a Depart date</span>
+                            </div>
+                            <div class="label depart return">
+                                <label class="label-Head">Return</label>
+                                <input type="text" placeholder="" class="inputField cursor" id="Return" name="Return" readonly="" autocomplete="off" value="">
+                                <p class="airport-name returnClass retday" style="display:none"></p>
+                                <span class="returnlabel returnText" onclick="callme('RoundTrip');" style="display: block;">Book Round Trip<br> to save extra</span>
+                                <span onclick="callme('OneWay');" id="clear-returnDate" title="Return Date Clear" class="clear-returnDate returnClass" style="display: none;">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="travelsSec travelsSecOpne form_holder_common">
+                          
+                                
+                            <div class="travelClass d-flex flex-column">
+                                <label class="label-Head"> Travelers & Class </label>
+                                <input type="text" id="paxCounterVal" value="1 Traveler(s)" class="inputField valid cursor" readonly="">
+                                <span class="travel-Class w-100 fs14 travelCla">Economy</span>
+                            </div>
+
+                                <div class="error-div" id="TotalPax_error" style="display: none;">
+                                    <span class="error-flL errorbox1"><i class="fa fa-exclamation-triangle"></i></span>
+                                    <span class="error-flL error-innertxt">Total <b>'Infant'</b> not more then <b>'Adult'</b></span>
+                                </div>
+                        
+                            <i class="bi bi-chevron-down"></i>
+
+<div class="passenger-Box" style="display: none;">
+
+    <div class="passenger d-flex flex-wrap">
+        <div class="pax-limit">
+            <label class="fs13">Adults</label>
+            <div class="count mt-2">
+                <input type="hidden" class="Adult inputbalnk" name="Adult" id="Adult" value="1">
+                <span class="spinner disable" onclick="searchengine.decrement('Adult')"><i class="bi bi-dash"></i></span>
+                <span class="add-bg Adult">1</span>
+                <span class="spinner-Plus" onclick="searchengine.increment('Adult')"><i class="bi bi-plus"></i></span>
+            </div>
+        </div>
+        <div class="pax-limit">
+            <label class="fs13">Child <span class="fs10 font-Lightgrey">(2-12 Yrs)</span></label>
+            <div class="count mt-2">
+                <input type="hidden" class="Child inputbalnk" name="Child" id="Child" value="0">
+                <span class="spinner disable" onclick="searchengine.decrement('Child')"><i class="bi bi-dash"></i></span>
+                <span class="add-bg Child">0</span>
+                <span class="spinner-Plus" onclick="searchengine.increment('Child')"><i class="bi bi-plus fs14"></i></span>
+                <i class=""></i>
+            </div>
+        </div>
+        <div class="pax-limit d-none">
+            <label class="fs13">Infant <span class="fs10 font-Lightgrey">(Below 2Yrs)</span></label>
+            <div class="count mt-2">
+                <input type="hidden" name="InfantOnSeat" id="InfantOnSeat" value="0">
+                <span class="spinner disable" onclick="searchengine.decrement('InfantOnSeat')"><i class="bi bi-dash fs14"></i></span>
+                <span class="add-bg InfantOnSeat">0</span>
+                <span class="spinner-Plus" onclick="searchengine.increment('InfantOnSeat')"><i class="bi bi-plus fs14"></i></span>
+            </div>
+        </div>
+        <div class="pax-limit">
+            <label class="fs13">Infant <span class="fs10 font-Lightgrey">(Below 2Yrs)</span></label>
+            <div class="count mt-2">
+                <input type="hidden" name="InfantOnLap" id="InfantOnLap" value="0">
+                <span class="spinner disable" onclick="searchengine.decrement('InfantOnLap')"><i class="bi bi-dash fs14"></i></span>
+                <span class="add-bg InfantOnLap">0</span>
+                <span class="spinner-Plus" onclick="searchengine.increment('InfantOnLap')"><i class="bi bi-plus fs14"></i></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flight-class-type">
+
+        <ul class="class-type">
+            <li><label><input type="radio" name="Cabin" value="Economy" checked=""><span>Economy </span> </label></li>
+            <li><label><input type="radio" name="Cabin" value="PremiumEconomy"><span>Premium Economy</span> </label></li>
+            <li><label><input type="radio" name="Cabin" value="Business"><span>Business</span> </label></li>
+            <li><label><input type="radio" name="Cabin" value="First"><span>First</span> </label></li>
+        </ul>
+
+    </div>
+
+    <button type="button" class="search-Button fs14 apply done_Btn">Apply</button>
+
+</div>
+                        </div>
+                        <div class="serach-Btn">
+                            <button type="submit" class="search-Button fs18"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</form><script type="text/javascript">
+//<![CDATA[
+if (!window.mvcClientValidationMetadata) { window.mvcClientValidationMetadata = []; }
+window.mvcClientValidationMetadata.push({"Fields":[],"FormId":"flights","ReplaceValidationSummary":false});
+//]]>
+</script>
+        </div>
+    </div>
+</section>
+
+<div id="contentCntr">
+
+    <div class="container">
+
+        <!-- Content-->
+        <div class="contentBox">
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="content">
+
+                        <h3>American Airlines Booking- Travel under your budget!</h3>
+                        <p>Travel makes us all feel relaxed and refreshed. Is it time for you to explore your favorite destination with your near and dear ones? If it is, then American Airlines Booking is a wise choice as your air travel partner.</p>
+                        <p>By relying on AA, one is able to reach their desired destination without making a hole in their pocket. Seamless and comfortable air travel is now possible with the services that American airlines have for its travellers.</p>
+                        <p>AA is a USA-based airline which has been making travelling hassle-free for the last many years. Headquartered in Fort Worth, Texas, it offers flights to 350 destinations globally. Furthermore, its fleet size is 933. To have an air journey that is filled with comfort, this is the right choice.</p>
+                        <h4>How To Book American Airlines Flights?</h4>
+                        <p>Confirming the reservations with American Airlines isn't a complicated process. Furthermore, the availability of online and offline ways makes the booking process even more easy.</p>
+                        <p>In order to confirm your ticket through American Airlines official Site, follow the procedures given below.</p>
+                        <h4>Online Method</h4>
+                        <ul>
+                            <li>Firstly, head to the official website of the American airlines.</li>
+                            <li>Select the trip type. Choose from the Round-trip and one-way options.</li>
+                            <li>Here, go ahead to the total number of flyers.</li>
+                            <li>In this step, mention your travel dates from the calendar given here.</li>
+                            <li>Click on search and then choose your preferred flight option from the list that appears here.</li>
+                            <li>At last, pay the confirmation amount.</li>
+                            <li>The airline will then send the American Airlines flight tickets via the mail.</li>
+                        </ul>
+                        <h4>Offline Method</h4>
+                        <ul>
+                            <li>The offline method to finalize your tickets includes speaking with the travel representatives through the phone number.</li>
+                            <li>Head to the official website of American airlines and search the contact information.</li>
+                            <li>Dial it to get in touch with the travel team.</li>
+                            <li>Furthermore, proceed by sharing the travel details like the total number of passengers, date of travel, number of passengers, etc.</li>
+                            <li>Finally, choose the flight and make the payment for it.</li>
+                            <li>Lastly, the airline will send the American Airlines Flights ticket.</li>
+                        </ul>
+                        <h4>How to Manage American Airlines Booking?</h4>
+                        <p>Did you realize the need to make changes to your current reservation? Well, no worries. Travelers can make modifications and finalize them in no time through the American Airlines Manage Booking option.</p>
+                        <p>Refer to the steps given below and follow them in order to confirm the needed changes to your American airline booking.</p>
+                        <ul>
+                            <li>First and foremost, open the American airline official website.</li>
+                            <li>Now, click on the "My Trips" tab.</li>
+                            <li>Here, mention the booking confirmation number in addition to the passengers last name.</li>
+                            <li>In this step, click on "Find reservation".</li>
+                            <li>Continue and make the required changes to your booking.</li>
+                            <li>Finalize the modifications made here.</li>
+                            <li>The changes will apply to theAA Booking in no time.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>What are you now waiting for? Fly off to the destination of your choice by choosing American airlines as your air travel partner. Make American Airlines Booking today and pack for your trip without wasting any time.</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Content-->
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer pt-4">
+    <div class="container">
+        <div class="row justify-content-between common_padding">
+            <div class="col-6 col-sm-5 col-lg-3">
+                <p class="footer_title">Top Destinations</p>
+                <ul class="footer_ul mt-2">
+                    <li> <a href="/deals/flight-to-chicago.html">Flights To Chicago</a></li>
+                    <li><a href="/deals/flight-to-denver.html">Flights To Denver</a></li>
+                    <li><a href="/deals/flight-to-miami.html">Flights To Miami</a></li>
+                    <li><a href="/deals/flight-to-atlanta.html">Flights To Atlanta</a></li>
+                    <li><a href="/deals/flight-to-austin.html">Flights To Austin</a></li>
+                    <li><a href="/deals/flight-to-new-york.html">Flights To New York</a></li>
+
+                </ul>
+            </div>
+            <div class="col-5 col-lg-2">
+                <p class="footer_title">Quick Links</p>
+                <ul class="footer_ul mt-1 mt-sm-2">
+                    <li><a href="/terms-condition.html">Terms and Conditions</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/website-terms-of-use.html">Website Terms of Use</a></li>
+                    <li><a href="/contact-us.html">Support</a></li>
+                    <li><a href="/about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="col-7 col-sm-5 col-lg-2 mt-3 mt-lg-0">
+                <p class="footer_title">Top Airlines</p>
+                <ul class="footer_ul mt-1 mt-sm-2">
+                    <li><a href="ua.html">Flights</a></li>
+                    <li><a href="dl.html">Flights</a></li>
+                    <li><a href="aa.html">Flights</a></li>
+                    <li><a href="b6.html">Flights</a></li>
+                    <li><a href="as.html">Flights</a></li>
+                    <li><a href="ek.html">Flights</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-5 col-lg-4 mt-3 mt-lg-0">
+                <p class="footer_title">Get in touch</p>
+                <ul class="footer_ul mt-1 mt-sm-2 footer_ul2">
+                    <li>
+                        <a href="/cdn-cgi/l/email-protection#3851565e57785a57575348595b535e5441165b5755">
+                            <div class="footer_icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <p>
+                                For Support<br>info@flyreservationdesk.com
+                                <!-- <span class="__cf_email__" data-cfemail="01686f676e41636e6e6a7160626a676d782f626e6c">[email protected]</span> -->
+                            </p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+1-855-717-0901">
+                            <div class="footer_icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <p>+1-855-717-0901</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <hr class="hr_cust">
+        <div class="row common_padding">
+            <div class="col-12 text-center">
+                <p class="font_12">
+                    The airfares and other information on flyreservationdesk are accurate and given to the customers to the best of their authorities. All the flights that you see here can experience a change in fares anytime. Also, you may see significant changes by date, destination, departure, and flight timings. flyreservationdesk will include all the extra charges which also include administrative fees and taxes. There is no direct connection between the flyreservationdesk site and official airline websites. Any airline referenced on this website and their e-tickets will take up to 48 hours for issuance as per availability.
+                </p>
+            </div>
+        </div>
+        <hr class="hr_cust">
+    </div>
+
+    <div class="py-1 py-sm-2">
+        <div class="container">
+            <div class="row common_padding align-items-center">
+                <div class="col-12 text-center">
+                    <p><img src="images/card.png" class="img-fluid" alt="card"> <a href="https://www.trustpilot.com/review/flyreservationdesk.com" style="display:inline-block; width:135px; margin-left:15px;" target="_blank"><img src="images/trustpilot.svg" alt="trustpilot"></a></p>
+                    <p class="font_12 py-3">Copyright © 2024 - 2025 flyreservationdesk. | 33 S Wood ave, Suite-600, Iselin, NJ, 08830.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+</footer>
+
+        </div>
+    </div>
+
+
+    
+    <script data-cfasync="false" src="js/email-decode.min.js"></script><script>
+
+            var closeCount = 0;
+        $(document).scroll(function () {
+                let y = $(this).scrollTop();
+            if (y > 400) {
+                if (closeCount <= 0) {
+                $('.phone-only-sec').fadeIn();
+            }
+        }
+            $(".cross-icon").click(function () {
+                $(".phone-only-sec").fadeOut();
+            closeCount = closeCount + 1;
+        });
+    });
+
+        C_D = new Date('2025-05-14 08:20:24')
+        DOMAIN_URL = "https://www.flyreservationdesk.com/";
+        AFFILIATE_ID = parseInt("37000", 10);
+        Toll_Free_Number = "tel:+1-855-717-0901";
+    </script>
+    <script type="text/javascript">
+
+        function cookiesPolicyPrompt() {
+            if (Cookies.get('acceptedCookiesPolicy') == "yes" || Cookies.get('acceptedCookiesPolicy') == "no") {
+                $("#alertCookiePolicy").hide();
+            } else {
+                $("#alertCookiePolicy").show();
+            }
+            $('#btnAcceptCookiePolicy').on('click', function () {
+                Cookies.set('acceptedCookiesPolicy', 'yes', { expires: 30 });
+                $("#alertCookiePolicy").hide();
+            });
+            $('#btnDeclineCookiePolicy').on('click', function () {
+                Cookies.set('acceptedCookiesPolicy', 'no', { expires: 30 });
+                $("#alertCookiePolicy").hide();
+            });
+        }
+
+        $(document).ready(function () {
+            cookiesPolicyPrompt();
+        });
+    $(document).ready(function () {
+            $("#advisry-close").click(function () {
+                $('#imp-advisory').hide(1000);
+            });
+        });
+    </script>
+    
+    <script src="js/searchengine.js"></script>
+
+
+
+
+
+    
+
+
+</body></html>
